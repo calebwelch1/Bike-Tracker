@@ -4,6 +4,10 @@ const router = require("express").Router();
 //router creates a new ROUTER OBJECT that we can use
 
 // adding routes
+//TODO: route for saving activity data
+//TODO: route for getting activity data by duration
+//TODO: route for getting activity data
+
 router.get("/", (request, response) => {});
 
 // then we export it to the main file
