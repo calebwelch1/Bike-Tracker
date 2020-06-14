@@ -14,6 +14,12 @@ app.listen(PORT, (request, response) => {
 const apiRoutes = require("./routes/apiRoutes");
 // use them
 //same for html routes
+
 const htmlRoutes = require("./routes/htmlRoutes");
+//must add middleware ebfore you use the api/html routes
+// needed to use post data!
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.use("/api", apiRoutes);
 app.use("/", htmlRoutes);
